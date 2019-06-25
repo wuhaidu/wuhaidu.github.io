@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang>
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,12 +95,13 @@
 
 
 <meta name="description" content="一.并发设计的一些概念1.同步与异步 同步:同步方法调用一旦开始，调用者必须等到方法调用返回后才能继续后续的行为。  异步:方法调用就会立即返回，调用者不需要等待就可以继续后续的操作。 2.并发与并行 严格意义上来说，并行的多个任务是真实的同时执行，而并发偏重于多个任务交替执行，这个过程只是交替的，一会运行任务A，一会运行任务B,系统会不停地在两者间切换。但对于外部观察者来说，即使多个任务之间是串">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="实战Java高并发程序设计(一)">
 <meta property="og:url" content="http://yoursite.com/2019/04/17/1/index.html">
 <meta property="og:site_name" content="whd blogs">
 <meta property="og:description" content="一.并发设计的一些概念1.同步与异步 同步:同步方法调用一旦开始，调用者必须等到方法调用返回后才能继续后续的行为。  异步:方法调用就会立即返回，调用者不需要等待就可以继续后续的操作。 2.并发与并行 严格意义上来说，并行的多个任务是真实的同时执行，而并发偏重于多个任务交替执行，这个过程只是交替的，一会运行任务A，一会运行任务B,系统会不停地在两者间切换。但对于外部观察者来说，即使多个任务之间是串">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-04-17T01:28:23.994Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="实战Java高并发程序设计(一)">
@@ -120,7 +121,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -152,7 +153,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -175,7 +176,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">认真的人才有资格开玩笑</p>
       
   </div>
 
@@ -200,7 +201,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -210,7 +211,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -274,9 +275,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-17T09:25:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T09:25:00+08:00">
                 2019-04-17
               </time>
             
@@ -413,6 +414,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/04/17/1/" rel="prev" title="Java高并发程序设计之并发基础">
+                Java高并发程序设计之并发基础 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -465,10 +470,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -478,7 +483,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">whd</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">我曾把堕落的原因 都丢给时间</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -488,8 +493,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -556,7 +561,7 @@
 
 
   <!--
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
    -->
 
 
@@ -566,7 +571,7 @@
 
 
     <!--
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 	-->
 
 

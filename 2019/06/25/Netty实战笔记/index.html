@@ -94,17 +94,21 @@
 
 
 
-<meta name="description" content="我曾把堕落的原因 都丢给时间">
+<meta name="description" content="Netty 实战笔记1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站2.Future提供了一种在操作完成时通知应用程序的方式。入站事件包括：1）连接已被激活或者连接失活2）数据读取3）用户事件4）错误事件 出站事件动作：打开或者关闭远程节点的连接将数据写到或者冲刷到套接字 每个Channel都拥有一个与之相关联的ChannelPipeline,其持">
 <meta name="keywords" content="Java">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="whd blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/06/25/Netty实战笔记/index.html">
 <meta property="og:site_name" content="whd blogs">
-<meta property="og:description" content="我曾把堕落的原因 都丢给时间">
+<meta property="og:description" content="Netty 实战笔记1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站2.Future提供了一种在操作完成时通知应用程序的方式。入站事件包括：1）连接已被激活或者连接失活2）数据读取3）用户事件4）错误事件 出站事件动作：打开或者关闭远程节点的连接将数据写到或者冲刷到套接字 每个Channel都拥有一个与之相关联的ChannelPipeline,其持">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://120.78.93.132/image/byteBuff.jpg">
+<meta property="og:image" content="http://120.78.93.132/image/EventLoop%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+<meta property="og:updated_time" content="2019-06-25T01:43:17.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="whd blogs">
-<meta name="twitter:description" content="我曾把堕落的原因 都丢给时间">
+<meta name="twitter:description" content="Netty 实战笔记1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站2.Future提供了一种在操作完成时通知应用程序的方式。入站事件包括：1）连接已被激活或者连接失活2）数据读取3）用户事件4）错误事件 出站事件动作：打开或者关闭远程节点的连接将数据写到或者冲刷到套接字 每个Channel都拥有一个与之相关联的ChannelPipeline,其持">
+<meta name="twitter:image" content="http://120.78.93.132/image/byteBuff.jpg">
 
 
 
@@ -134,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/25/Netty实战笔记/">
 
 
 
 
 
-  <title>whd blogs</title>
+  <title> | whd blogs</title>
   
 
 
@@ -159,8 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -233,9 +236,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -265,9 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/25/Netty实战笔记/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -317,9 +318,7 @@
       
 
       
-        
-          
-            <h2 id="Netty-实战笔记"><a href="#Netty-实战笔记" class="headerlink" title="Netty 实战笔记"></a>Netty 实战笔记</h2><h5 id="1-通道建立连接时-ChannelHandler的channelActive-被回调-—-入站"><a href="#1-通道建立连接时-ChannelHandler的channelActive-被回调-—-入站" class="headerlink" title="1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站"></a>1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站</h5><h5 id="2-Future提供了一种在操作完成时通知应用程序的方式。"><a href="#2-Future提供了一种在操作完成时通知应用程序的方式。" class="headerlink" title="2.Future提供了一种在操作完成时通知应用程序的方式。"></a>2.Future提供了一种在操作完成时通知应用程序的方式。</h5><p>入站事件包括：<br>1）连接已被激活或者连接失活<br>2）数据读取<br>3）用户事件<br>4）错误事件</p>
+        <h2 id="Netty-实战笔记"><a href="#Netty-实战笔记" class="headerlink" title="Netty 实战笔记"></a>Netty 实战笔记</h2><h5 id="1-通道建立连接时-ChannelHandler的channelActive-被回调-—-入站"><a href="#1-通道建立连接时-ChannelHandler的channelActive-被回调-—-入站" class="headerlink" title="1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站"></a>1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站</h5><h5 id="2-Future提供了一种在操作完成时通知应用程序的方式。"><a href="#2-Future提供了一种在操作完成时通知应用程序的方式。" class="headerlink" title="2.Future提供了一种在操作完成时通知应用程序的方式。"></a>2.Future提供了一种在操作完成时通知应用程序的方式。</h5><p>入站事件包括：<br>1）连接已被激活或者连接失活<br>2）数据读取<br>3）用户事件<br>4）错误事件</p>
 <p>出站事件动作：<br>打开或者关闭远程节点的连接<br>将数据写到或者冲刷到套接字</p>
 <p>每个Channel都拥有一个与之相关联的ChannelPipeline,其持有一个ChannelHandler的实例链。默认情况下，ChannelHandler会把对它的方法的调用<br>的调用转发给链中的下一个ChannelHandler。因为，如果exceptionCaught()方法没有被该链中的某处实现，那么所接收的异常将会被传递到ChannelPipeline的尾端并被记录。</p>
 <p>SimpleChannelInboundHandler与ChannelInboundHandler<br>客户端使用SimpleChannelInboundHandler<br>服务端使用ChannelInboundHandler</p>
@@ -367,8 +366,6 @@
 <p>##编码器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">将消息编码为字节</span><br><span class="line">将消息编码为消息</span><br></pre></td></tr></table></figure></p>
 <p>encode(ChannelHandlerContext ctx, I msg, ByteBuf out)<br>encode()方法是你需要实现的唯一抽象方法。它被调用时将会传入要被该类编码为 ByteBuf 的（类型为 I 的）出站<br>消息。该 ByteBuf 随后将会被转发给 ChannelPipeline<br>中的下一个 ChannelOutboundHandler</p>
 
-          
-        
       
     </div>
     
@@ -387,134 +384,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="whd">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="whd blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/1/" itemprop="url">Java高并发程序设计之并发基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T10:55:07+08:00">
-                2019-04-17
-              </time>
+              <a href="/2019/04/17/1/" rel="next" title="Java高并发程序设计之并发基础">
+                <i class="fa fa-chevron-left"></i> Java高并发程序设计之并发基础
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>一.线程生命周期</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-	
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -524,339 +415,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/17/1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="whd">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="whd blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/17/1/" itemprop="url">实战Java高并发程序设计(一)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T09:25:00+08:00">
-                2019-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="一-并发设计的一些概念"><a href="#一-并发设计的一些概念" class="headerlink" title="一.并发设计的一些概念"></a>一.并发设计的一些概念</h2><p><strong>1.同步与异步</strong></p>
-<p>同步:同步方法调用一旦开始，调用者必须等到方法调用返回后才能继续后续的行为。</p>
-<p> 异步:方法调用就会立即返回，调用者不需要等待就可以继续后续的操作。</p>
-<p><strong>2.并发与并行</strong></p>
-<p>严格意义上来说，并行的多个任务是真实的同时执行，而并发偏重于多个任务交替执行，这个过程只是交替的，一会运行任务A，一会运行任务B,系统会不停地在两者间切换。但对于外部观察者来说，即使多个任务之间是串行并发的，也会造成多任务间是并行执行的错觉</p>
-<p>实际上，如果系统只有一个CPU,任务不可能实现真实的并行,毕竟一个CPU一次只能执行一条指令。真实的并行也只能出现在拥有多个CPU的系统中(比如多核CPU)</p>
-<p><strong>3.临界区</strong></p>
-<p>临界区用来表示一种公共资源或者说是共享数据，可以被多个线程使用。但是每一次，只能有一个线程使用它，其他线程要使用这个资源就必须等待。</p>
-<p><strong>4.阻塞与非阻塞</strong></p>
-<p>等待资源的线程需要等待，等待会导致线程挂起。这种情况下就是阻塞。</p>
-<p><strong>5.死锁(Deadlock)、饥饿(Starvation)、活锁(Livelock)</strong></p>
-<p>死锁:多个线程同时被阻塞，它们中的一个或者全部都在等待某个资源被释放。</p>
-<p>饥饿:如果优先级高的线程一直抢占优先级低线程的资源，导致低优先级线程无法得到执行，这就是饥饿。</p>
-<p>活锁:多线程中出现了相互谦让，都主动将资源释放给别的线程使用，这样这个资源在多个线程之间跳动而又得不到执行，这就是活锁。</p>
-<h2 id="二-并发级别"><a href="#二-并发级别" class="headerlink" title="二.并发级别"></a>二.并发级别</h2><p><strong>1.阻塞</strong><br><strong>2.无饥饿</strong></p>
-<p>主要体现在非公平锁与公平锁情况下，对于非公平锁而言，系统运行高优先级的线程插队，就有可能导致低优先级线程产生饥饿。而如果锁是公平的，满足先来后到，那么饥饿就不会产生。</p>
-<p>例如:ReentrantLock构造函数中提供了两种锁：创建公平锁和非公平锁（默认）。</p>
-<p><strong>3.无障碍</strong></p>
-<p>线程不会因为临界区的问题导致被挂起。无障碍的多线程并不一定能顺畅的运行，因为当临界区中存在严重的冲突时，所有的线程可能都会不断回滚自己的操作，而没有一个线程能走出临界区，这种情况下会影响系统的正常执行。</p>
-<p><strong>4.无锁</strong></p>
-<p>无锁的并发都是无障碍的，但是不同的是。无锁的并发保证必然有一个线程额能够在有限步内完成操作离开临界区。</p>
-<p><strong>5.无等待</strong></p>
-<p>无锁只要求一个线程可以在有限步内完成操作，而五等待则在无锁的基础上更进异步扩展。它要求所有的线程都必须在有限步内完成，这样就不会引起饥饿问题。如果限制这个步骤上限，还可以进一步分解为有界无等待和线程数无关的无等待几种。</p>
-<p>一种典型的无等待结构就是RCU(Read-Copy-Update)<br>。它的基本思想是，对数据的读可以不加控制。因此，所有的读线程都是无等待的,他们既不会被锁定等待也不会引起冲突。例如:ConcurrentHashMap</p>
-<h2 id="三-回到Java-JMM"><a href="#三-回到Java-JMM" class="headerlink" title="三.回到Java:JMM"></a>三.回到Java:JMM</h2><p><strong>1.原子性</strong></p>
-<p>一个操作不可被中断.例如:赋值操作， int i=1;<br>但是不使用int型而使用long型的话，在32位系统中，long型数据的读写不是原子性的(long有64位)。</p>
-<p><strong>2.可见性</strong></p>
-<p>可见性是指当一个线程修改了某一个共享变量的值，其他线程是否能够立即知道这个修改。在串行程序中，可见性问题并不存在。在并行程序中，如果一个线程改变了某个全局变量的值，那么其他线程未必就会这个改动。例如多个CPU时，CPU1与CPU2会由于编译器优化或者硬件优化的缘故，产生可见性问题。</p>
-<p>其他可导致可见性:指定重排、编辑器的优化</p>
-<p><strong>3.有序性</strong></p>
-<p>在并发时，程序的执行可能就会出现乱序。因为程序在执行时。可能会进行指令重排序，重排序后的指令与原指令未必一致。指令重排可以保证串行语义一致，但是没有义务保证多线程间的语义也一致。</p>
-<p>一条指令的执行分为以下几步:</p>
-<ul>
-<li>取指 IF</li>
-<li>译码和区寄存器操作数 ID</li>
-<li>执行或者有效地址计算 EX</li>
-<li>存储器访问 MEM</li>
-<li>写回 WB</li>
-</ul>
-<p>CPU为什么会去指令重排序？原因是CPU使用流水线技术来执行指令，需要消除指令之间的停顿。</p>
-<p>汇编指令的执行不是一步就可以执行完毕的，在CPU的实际工作时，需要分多个步骤依次执行，每个步骤所涉及到的硬件也可能不同。</p>
-<p>例如下面两条指令的执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">指令1 IF ID EX MEM WB</span><br><span class="line">指令2    IF ID EX  MEM WB</span><br></pre></td></tr></table></figure></p>
-<p>假如每条指令的每个步骤是1s,如果指令2等指令1执行完毕之后才开始执行，就等待5s,但是如果使用流水线后，指令2只需等待1毫秒就可以执行，性能得到了很大的提升。</p>
-<p>如果存在多条指令指令,例如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = b + c;</span><br><span class="line"></span><br><span class="line">LW  R1,b    IF ID EX MEM WB</span><br><span class="line">LW  R2,c       IF ID EX MEM WB</span><br><span class="line">ADD R3,R1,R2      IF ID 等待 MEM WB</span><br><span class="line">SW  a,R3             IF 等待 EX MEM WB</span><br></pre></td></tr></table></figure></p>
-<p>上述指令的执行会在ADD的时候进行等待停顿，原因R2的数据还没准备完成,还未WB到寄存器R2中。导致下面的步骤会继续等待。</p>
-<p>再看下面例子，会出现大量的指令等待:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = b + c;</span><br><span class="line">d = e - f;</span><br><span class="line"></span><br><span class="line">LW  R1,b    IF   ID   EX   MEM   WB</span><br><span class="line">LW  R2,c         IF   ID   EX    MEM   WB</span><br><span class="line">ADD R3,R1,R2          IF   ID    等待  MEM  WB</span><br><span class="line">SW  a,R3                   IF    等待  EX   MEM   WB</span><br><span class="line">LW  R4,e                   IF    ID    EX   MEM   WB</span><br><span class="line">LR  R5,f                   IF    ID    EX   MEM   WB</span><br><span class="line">SUB R6,R4,R5                     IF    ID   等待 MEM  WB      </span><br><span class="line">SW  d,R6                               IF   ID   等待 MEM WB</span><br></pre></td></tr></table></figure></p>
-<p>如果把指令(ADD R3,R1,R2),(SW  a,R3 )与(LW  R4,e),(LR  R5,f)交换位置后，就可以把停顿的时间利用起来:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = b + c;</span><br><span class="line">d = e - f;</span><br><span class="line"></span><br><span class="line">LW  R1,b    IF   ID   EX   MEM   WB</span><br><span class="line">LW  R2,c         IF   ID   EX    MEM   WB</span><br><span class="line">LW  R4,e                   IF    ID    EX   MEM   WB</span><br><span class="line">LR  R5,f                   IF    ID    EX   MEM   WB</span><br><span class="line">ADD R3,R1,R2                     IF    ID   EX    MEM  WB</span><br><span class="line">SW  a,R3                               IF   ID    EX   MEM  WB</span><br><span class="line">SUB R6,R4,R5                           IF   ID    EX   MEM  WB      </span><br><span class="line">SW  d,R6                                    IF    ID   EX   MEM WB</span><br></pre></td></tr></table></figure></p>
-<p>所以使用指令重排虽然带来的乱序，但是相对于提高的CPU的性能，这点牺牲是值得的。</p>
-<p>代码案例:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public class OrderingTest &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        OrderExample orderExample = new OrderExample();</span><br><span class="line"></span><br><span class="line">        Thread t1 = new Thread(() -&gt;&#123;</span><br><span class="line">            orderExample.writer();</span><br><span class="line">        &#125;);</span><br><span class="line">        Thread t2 = new Thread(() -&gt; &#123;</span><br><span class="line">            orderExample.reader();</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class OrderExample&#123;</span><br><span class="line">    int a = 0;</span><br><span class="line">    boolean flag = false;</span><br><span class="line"></span><br><span class="line">    public void writer()&#123;</span><br><span class="line">        a = 1;</span><br><span class="line">        flag = true;</span><br><span class="line"></span><br><span class="line">        System.out.println(Thread.currentThread().getName() + &quot;:a = &quot; + a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void reader()&#123;</span><br><span class="line">        if(flag) &#123;</span><br><span class="line">            int i = a + 1;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + &quot;:i = &quot; + i);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果有:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Thread-0:a = 1</span><br><span class="line">Thread-1:i = 1</span><br></pre></td></tr></table></figure>
-<p><strong>4.哪些指令不能重排:Happen-Before规则</strong></p>
-<ul>
-<li>程序顺序原则:一个线程内保证语义的串行性</li>
-<li>volatile原则:volatile变量的写，先发生于读，这保证了volatile变量的可见性</li>
-<li>锁规则:解锁(unlock)必然发生在随后的加锁(lock)前</li>
-<li>传递性:A先于B,B先于C,那么A必然先于C</li>
-<li>线程的start()方法优先于它的每一个动作</li>
-<li>线程的所有操作先于线程的终结(Thread.jion())</li>
-<li>线程的中断(interrupt())先于被中断线程的代码</li>
-<li>对象的构造函数执行、结束先于finalize()方法</li>
-</ul>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-	
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/16/1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="whd">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="whd blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/04/16/1/" itemprop="url">page</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-16T21:48:23+08:00">
-                2019-04-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("", "");</script> //需要写上leancloud的key
-<script type="text/javascript">
-  var time=0
-  var title=""
-  var url=""
-  var query = new AV.Query('Counter');//表名
-  query.notEqualTo('id',0); //id不为0的结果
-  query.descending('time'); //结果按阅读次数降序排序
-  query.limit(20);  //最终只返回10条结果
-  query.find().then(function (todo) {
-    for (var i=0;i<10;i++){ 
-      var result=todo[i].attributes;
-      time=result.time;  //阅读次数
-      title=result.title; //文章标题
-      url=result.url;     //文章url
-      var content="<p>"+"<font color='#0477ab'>"+"【阅读次数:"+time+"】"+"<a href='"+"http://thief.one"+url+"'>"+title+"</font>"+"</a>"+"</p>";
-      // document.write("<a href='"+"http://thief.one/"+url+"'>"+title+"</a>"+"    Readtimes:"+time+"<br>");
-      document.getElementById("heheda").innerHTML+=content
-    }
-  }, function (error) {
-    console.log("error");
-  });
-</script>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-	
-	
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -864,6 +427,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -884,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -927,6 +503,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Netty-实战笔记"><span class="nav-number">1.</span> <span class="nav-text">Netty 实战笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-通道建立连接时-ChannelHandler的channelActive-被回调-—-入站"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.通道建立连接时,ChannelHandler的channelActive()被回调  —-入站</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Future提供了一种在操作完成时通知应用程序的方式。"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2.Future提供了一种在操作完成时通知应用程序的方式。</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1064,6 +656,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
